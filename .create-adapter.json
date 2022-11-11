@@ -1,0 +1,46 @@
+{
+    "expert": "yes",
+    "cli": false,
+    "adapterName": "oekofen",
+    "title": "Oekofen Heizung",
+    "description": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+    "keywords": ["Heating", "Home Automation", "iobroker", "PE", "oekofen"],
+    "contributors": ["Martin Fuchsluger <schretzi@schretzi.at>"],
+    "features": ["adapter"],
+    "adminFeatures": [],
+    "type": "climate-control",
+    "startMode": "daemon",
+    "connectionType": "local",
+    "dataSource": "poll",
+    "connectionIndicator": "yes",
+    "adapterSettings": [
+        {
+            "key": "ip",
+            "label": "IP Address",
+            "inputType": "text",
+            "defaultValue": "192.168.1.1"
+        },
+        {
+            "key": "path",
+            "label": "Url-Path/Password",
+            "inputType": "text",
+            "defaultValue": "abcdef"
+        }
+    ],
+    "language": "TypeScript",
+    "nodeVersion": "16",
+    "adminUi": "json",
+    "releaseScript": "yes",
+    "indentation": "Space (4)",
+    "quotes": "double",
+    "es6class": "no",
+    "tools": ["ESLint", "devcontainer", "Prettier"],
+    "authorName": "schretzi",
+    "authorGithub": "schretzi",
+    "authorEmail": "schretzi@schretzi.at",
+    "gitRemoteProtocol": "SSH",
+    "license": "MIT License",
+    "dependabot": "yes",
+    "target": "github",
+    "creatorVersion": "2.3.0"
+}

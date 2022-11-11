@@ -1,0 +1,101 @@
+{
+    "common": {
+        "name": "oekofen",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Oekofen Heizung",
+        "titleLang": {
+            "en": "Oekofen Heizung",
+            "de": "Oekofen Heizung",
+            "ru": "Oekofen Heizung",
+            "pt": "Oekofen Heizung",
+            "nl": "Oekofen Heizung",
+            "fr": "Oekofen Heizung",
+            "it": "Oekofen Heizung",
+            "es": "Oekofen Heizung",
+            "pl": "Oekofen Heizung",
+            "zh-cn": "Oekofen Heizung"
+        },
+        "desc": {
+            "en": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "de": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "ru": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "pt": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "nl": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "fr": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "it": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "es": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "pl": "Plugin to read from Oekofen Pelletronig Pellet Boiler",
+            "zh-cn": "Plugin to read from Oekofen Pelletronig Pellet Boiler"
+        },
+        "authors": ["schretzi <schretzi@schretzi.at>"],
+        "keywords": ["Heating", "Home Automation", "iobroker", "PE", "oekofen"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "oekofen.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/schretzi/ioBroker.oekofen/main/admin/oekofen.png",
+        "readme": "https://github.com/schretzi/ioBroker.oekofen/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "ip": "192.168.1.1",
+        "path": "abcdef"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
